@@ -16,7 +16,7 @@ module.exports = function (config) {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, '../coverage'),
+      dir: require('path').join(__dirname, '../../coverage'),
       reports: ['html', 'lcovonly'],
       fixWebpackSourcePaths: true
     },
@@ -25,18 +25,7 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome','ChromeHeadless'],
-    singleRun: false,
-    customLaunchers: {
-      ChromeHeadless: {
-        base: 'Chrome',
-        flags: [
-          '--headless',
-          '--disable-gpu',
-          // without a remote dubugging port, Google Chrome exits immediately
-          '--remote-debugging-port=9222',
-        ],
-      }
-    }
+    browsers: ['Chrome'],
+    singleRun: false
   });
 };
