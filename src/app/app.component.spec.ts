@@ -1,8 +1,14 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {ExampleNg6LibModule} from '../../projects/example-ng6-lib/src/lib/example-ng6-lib.module';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        BrowserModule,
+        ExampleNg6LibModule
+      ],
       declarations: [
         AppComponent
       ],
