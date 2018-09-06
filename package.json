@@ -4,12 +4,15 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
     "test-lib": "ng test example-ng6-lib --browsers ChromeHeadless --watch=false --code-coverage=true --sourceMap=true",
     "test-app": "ng test example-ng6-lib-test-app --browsers ChromeHeadless --watch=false --code-coverage=true",
     "test-debug": "ng test example-ng6-lib-test-app --browsers Chrome",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build-lib": "ng build --prod example-ng6-lib",
+    "clean": "rm -rf dist",
+    "pack-lib": "cd dist/example-ng6-lib && npm pack",
+    "package-lib": "npm run build-lib && npm run pack-lib"
   },
   "private": true,
   "dependencies": {
